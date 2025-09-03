@@ -1,0 +1,43 @@
+{
+	"manifest_version": 3,
+	"name": "Reply Assistant for X (Twitter)",
+	"description": "Suggests context-aware replies on X/Twitter using Gemini.",
+	"version": "0.1.0",
+	"action": {
+		"default_title": "Reply Assistant"
+	},
+	"permissions": [
+		"storage",
+		"scripting",
+		"activeTab"
+	],
+	"host_permissions": [
+		"https://x.com/*",
+		"https://twitter.com/*"
+	],
+	"background": {
+		"service_worker": "src/background.js",
+		"type": "module"
+	},
+	"options_page": "src/options.html",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://x.com/*",
+				"https://twitter.com/*"
+			],
+			"js": ["src/contentScript.js"],
+			"css": ["src/injected.css"],
+			"run_at": "document_idle"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["src/injected.css"],
+			"matches": [
+				"https://x.com/*",
+				"https://twitter.com/*"
+			]
+		}
+	]
+}

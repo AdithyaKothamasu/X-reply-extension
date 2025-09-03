@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Reply Assistant Settings</title>
+		<link rel="stylesheet" href="options.css" />
+	</head>
+	<body>
+		<main>
+			<h1>Reply Assistant Settings</h1>
+			<form id="settings-form">
+				<label>
+					<span>Gemini API Key</span>
+					<input type="password" id="apiKey" placeholder="AIza..." autocomplete="off" />
+				</label>
+				<label>
+					<span>Default tone</span>
+					<select id="tone">
+						<option>Friendly</option>
+						<option>Professional</option>
+						<option>Witty</option>
+						<option>Neutral</option>
+					</select>
+				</label>
+				<label>
+					<span>Max characters</span>
+					<input type="number" id="maxChars" min="80" max="260" value="200" />
+				</label>
+				<label class="row">
+					<input type="checkbox" id="emoji" checked />
+					<span>Allow emojis</span>
+				</label>
+				<div class="actions">
+					<button type="submit">Save</button>
+					<span id="status" aria-live="polite"></span>
+				</div>
+			</form>
+		</main>
+		<script src="options.js"></script>
+	</body>
+</html>

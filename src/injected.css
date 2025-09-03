@@ -1,0 +1,75 @@
+.reply-assistant-btn {
+	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.reply-assistant-btn:hover {
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.3);
+}
+@media (prefers-color-scheme: light) {
+	.reply-assistant-btn:hover {
+		background: rgba(0, 0, 0, 0.06);
+		border-color: rgba(0, 0, 0, 0.18);
+	}
+}
+
+/* Icon-sized toolbar button */
+.reply-assistant-icon {
+	width: 36px;
+	height: 36px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: transparent;
+	border-radius: 9999px;
+	padding: 0;
+	margin-left: 4px;
+	cursor: pointer;
+	color: inherit;
+	user-select: none;
+}
+.reply-assistant-icon:hover {
+	background: rgba(255, 255, 255, 0.12);
+}
+@media (prefers-color-scheme: light) {
+	.reply-assistant-icon:hover {
+		background: rgba(0, 0, 0, 0.08);
+	}
+}
+
+/* Dropdown container */
+.reply-assistant-dropdown {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 4px;
+}
+
+.reply-assistant-dropdown select {
+	padding: 4px 6px;
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	color: inherit;
+	font-size: 12px;
+	margin-right: 4px;
+	cursor: pointer;
+	transition: border-color 0.15s ease;
+}
+
+.reply-assistant-dropdown select:hover {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.reply-assistant-dropdown select:focus {
+	outline: none;
+	border-color: rgb(29, 155, 240);
+}
+
+@media (prefers-color-scheme: light) {
+	.reply-assistant-dropdown select {
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+	.reply-assistant-dropdown select:hover {
+		border-color: rgba(0, 0, 0, 0.4);
+	}
+}
